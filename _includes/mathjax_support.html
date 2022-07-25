@@ -1,4 +1,28 @@
+<!-- MathJax 3 -->   
 
+<script>
+  MathJax = {
+    loader: {load: ['[tex]/ams']},
+    tex: {
+      inlineMath: [['$', '$'], ["\\(","\\)"]], //行内公式
+      displayMath: [['$$','$$'], ["\\[","\\]"] ], //段内公式
+      tags: 'ams',
+      processEscapes: true
+    },
+    svg: {
+      scale: 90
+    },
+    packages: {'[+]': ['ams']},
+  };
+</script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+
+
+<!-- MathJax 2
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     TeX: {
@@ -16,10 +40,4 @@
     }
   });
 </script>
-
-<!-- MathJax -->    
-
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-
+-->
