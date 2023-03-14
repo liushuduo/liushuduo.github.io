@@ -65,12 +65,12 @@ $$\begin{equation}
 
 通过平移 $2\phi_0$ 相位就可以得到与原频率离散点相同的信号，因此 $lf_s-f$ 也是aliasing频率。假设我们将采样频率固定为1kHz，当信号的实际频率从0渐渐增加时，它和aliasing频率在频率轴上的分布变化如下图所示
 
-![Alt 固定采样频率](/img/in-post/post-%08fixfs.gif){:width="70%"}
+![Alt 固定采样频率](/img/in-post/post-fixfs.gif){:width="70%"}
 <span class="caption text-muted">固定采样频率为1kHz（对应Nyquist频率0.5kHz），将信号频率从0开始增加。可以看到当信号频率超过Nyquist频率之后，aliasing频率替代了原始频率的位置。</span>
 
 如果我们固定信号的频率，把采样频率从小到大的增加，那么这些aliasing频率和信号频率的变化关系如下图所示
 
-![Alt 固定信号频率](/img/in-post/post-%08changefs.gif){:width="70%"}
+![Alt 固定信号频率](/img/in-post/post-changefs.gif){:width="70%"}
 <span class="caption text-muted">固定信号频率为1kHz，把采样频率逐渐增加。可以看到当Nyquist频率小于信号频率时，在0到信号频率内存在aliasing频率，而当Nyquist频率大于信号频率时，则不存在aliasing频率。</span>
 
 我们知道任何一个信号都可以表示为所有频率的正弦函数的叠加。由此可见如果一个低通信号的最高频率为$f_\max$，那么它不产生aliasing频率需要满足 $f_s-f_\max>f_\max$ 也就是 $f_s>2f_\max$。
@@ -123,7 +123,7 @@ $$\begin{equation}
 ![Alt aliasing波数](/img/in-post/post-aliasing-wavenumber.jpeg){:width="70%"}
 <span class="caption text-muted">波长为 $1~\text{m}$ 阵元间距为 $1.5~\text{m}$ 时有多个角度会产生相同的空间采样结果。</span>
 
-### 总结一下
+### 总结
 本文主要说明了香农采样定理的时域理解方法，并将这个方法延拓到空间采样定理上。空间采样与时间采样类似存在一个能够完全恢复空域信号的临界点，这个临界点就是最高频率的**半波长**。
 
 ### 参考资料
